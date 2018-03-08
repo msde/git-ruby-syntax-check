@@ -50,8 +50,7 @@ changed_ruby_files.each do |file|
     next if skip_erb_files
 
     # use actual rails ERB renderer
-    cmd = "#{compiler_ruby} -e 'require \"action_view\"; puts ActionView::Template::Handlers::Erubis.new(File.read(\"#{file}\")).src' | #{compiler_ruby} -wc"
-  else
+    cmd = "#{compiler_ruby} -e 'require \"action_view\"; puts ActionView::Template::Handlers::ERB::Erubi.new(File.read(\"#{file}\")).src' | #{compiler_ruby} -wc"  else
     cmd = [compiler_ruby, "-wc", file].shelljoin
   end
 

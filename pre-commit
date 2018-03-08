@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # encoding: utf-8
 #
+# https://raw.githubusercontent.com/msde/git-ruby-syntax-check/master/pre-commit
+#
 # A hook script to verify that only syntactically valid ruby code is commited.
 # Called by git-commit with no arguments.  The hook should
 # exit with non-zero status after issuing an appropriate message if
